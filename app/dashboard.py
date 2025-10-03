@@ -22,13 +22,13 @@ ir_ipi_df = pd.read_csv(ir_ipi_path, encoding='latin1', sep=';')
 app = dash.Dash(__name__) # Inicializando a aplicação Dash
 
 app.layout = html.Div([ # Definindo o layout do dashboard
-    html.H1('Dashboard de Arrecadação Federal'), # Título do dashboard
-    dcc.Tabs([   # Criando abas para diferentes visualizações
-        dcc.Tab(label='Natureza Jurídica', children=[  # Aba para Natureza Jurídica
-            dcc.Graph( # Gráfico de barras para Natureza Jurídica
-                id='natureza-graph',  # Identificador do gráfico
-                figure=px.bar(natureza_df, x=natureza_df.columns[0], y=natureza_df.columns[-1], # Definindo o gráfico
-                              title='Arrecadação por Natureza Jurídica') # Título do gráfico
+    html.H1('Dashboard de Arrecadação Federal'),
+    dcc.Tabs([
+        dcc.Tab(label='Natureza Jurídica', children=[
+            dcc.Graph(
+                id='natureza-graph',
+                figure=px.bar(natureza_df, x=natureza_df.columns[0], y=natureza_df.columns[-1],
+                              title='Arrecadação por Natureza Jurídica')
             )
         ]),
         dcc.Tab(label='CNAE', children=[
@@ -43,6 +43,17 @@ app.layout = html.Div([ # Definindo o layout do dashboard
                 id='ir-ipi-graph',
                 figure=px.line(ir_ipi_df, x=ir_ipi_df.columns[0], y=ir_ipi_df.columns[-1],
                                title='Arrecadação de IR e IPI detalhada')
+            )
+        ]),
+        dcc.Tab(label='Análise Descritiva IR x IPI', children=[
+            html.H3('Comparação entre IR e IPI ao longo dos anos'),
+            dcc.Graph(
+                id='comparacao-ir-ipi',
+                figure=px.line(
+                    ir_ipi_df.groupby(['Ano', 'Tributo'])['Arrecadação Líquida'].sum().reset_index(),
+                    x='Ano', y='Arrecadação Líquida', color='Tributo', 
+                    title='Arrecadação Líquida Total por Ano e Tributo'
+                )
             )
         ]),
     ])
