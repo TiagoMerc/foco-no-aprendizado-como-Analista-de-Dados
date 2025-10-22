@@ -91,8 +91,9 @@ ______
 
 ![Resultado do Painel dia 24/09/2025](src/images/Captura%20de%20tela%202025-09-24%20141948.png)
 
----
+![Resultado do Painel dia 22/10/2025](src/images/dashboard_%2210-%2025.png)
 
+---
 ## Por que Dash?
 
 A biblioteca **Dash** foi escolhida para a construção do dashboard por ser uma das soluções mais robustas e flexíveis para visualização de dados interativos em Python. O Dash permite criar aplicações web com gráficos dinâmicos e interativos utilizando apenas Python, sem necessidade de conhecimento avançado em front-end. Além disso, integra-se facilmente com bibliotecas como Plotly e Pandas, facilitando a manipulação e exibição dos dados analisados nos notebooks.
