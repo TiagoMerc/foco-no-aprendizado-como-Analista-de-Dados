@@ -77,17 +77,21 @@ ______
 
 ## Visualizações disponíveis no dashboard
 
+- **Aba Natureza Jurídica:** Gráfico de barras com a arrecadação por natureza jurídica.
+- **Aba CNAE:** Gráfico de barras com a arrecadação por setor econômico (CNAE).
+- **Aba IR e IPI:** Gráfico de linha com a arrecadação detalhada de IR e IPI ao longo do tempo.
 
 ## Funcionalidades
 
 - Visualização interativa dos dados de arrecadação federal.
-![Resultado do Painel dia 22/10/2025](src/images/dashboard_%2210-%2025.png)
+- Navegação por abas para diferentes perspectivas dos dados.
 - Código modular e pronto para expansão (ex: filtros, novos gráficos, exportação de dados etc).
+
 **Print da tela**
 
 ![Resultado do Painel dia 24/09/2025](src/images/Captura%20de%20tela%202025-09-24%20141948.png)
 
-![Resultado do Painel dia 22/10/2025](src/images/dashboard_%2210-%2025.png)
+![Resultado do Painel dia 22/10/2025](src/images/dashboard_2210-2025.png)
 
 ---
 ## Por que Dash?
