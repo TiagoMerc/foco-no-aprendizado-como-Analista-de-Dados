@@ -88,9 +88,11 @@ ______
 - Código modular e pronto para expansão (ex: filtros, novos gráficos, exportação de dados etc).
 
 **Print da tela**
-
+Resultado do Painel dia 24/09/2025
 ![Resultado do Painel dia 24/09/2025](src/images/Captura%20de%20tela%202025-09-24%20141948.png)
 
+
+Resultado do Painel dia 22/10/2025
 ![Resultado do Painel dia 22/10/2025](src/images/dashboard_2210-2025.png)
 
 ---
